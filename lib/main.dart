@@ -12,7 +12,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.purple,
       ),
-      home: Scaffold(
+      home: FlavorBanner(
+        child: Scaffold(
             appBar: AppBar(
               title: Text('Home Screen'),
             ),
@@ -29,6 +30,7 @@ class MyApp extends StatelessWidget {
                   ],
                 )
             )
+        ),
       ),
     );
   }

@@ -29,7 +29,7 @@ class Config{
   }
 
   static get state {
-    return _config[Constant._state];
+    return _config[Constant._stateString];
   }
 
   static get colorState {
@@ -40,19 +40,22 @@ class Config{
 class Constant{
   static const _base_url_gateway = "gateway";
   static const _base_url = "non-gateway";
+  static const _stateString = "state-string";
   static const _state = "state";
   static const _color = "color";
 
   static Map<String,dynamic> qaConstants = {
     _base_url_gateway : "http://ini-qa-base-gateway.com/",
     _base_url : "http://ini-qa-base.com/",
-    _state : "QA",
-    _color : Colors.purpleAccent
+    _state : Flavor.QA,
+    _stateString : "QA",
+    _color : Colors.yellow
   };
 
   static Map<String,dynamic> prodConstants = {
     _base_url_gateway : "http://ini-prod-base-gateway.com/",
     _base_url : "http://ini-prod-base.com/",
-    _state : "Prod"
+    _state : Flavor.Production,
+    _stateString : "Prod"
   };
 }

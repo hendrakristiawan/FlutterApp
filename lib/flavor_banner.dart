@@ -25,8 +25,10 @@ class FlavorBanner extends StatelessWidget{
       child : CustomPaint(
         painter: BannerPainter(
             message: bannerConfig.name,
+            textDirection: Directionality.of(context),
+            layoutDirection: Directionality.of(context),
             location: BannerLocation.topStart,
-            color: bannerConfig.color
+            color: bannerConfig.color,
         ),
       )
     );
